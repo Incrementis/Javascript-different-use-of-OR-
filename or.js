@@ -65,21 +65,20 @@ function randomNumber(even_or_uneven)
 function Bet()
 {
 	// Variables
-	var even 		= document.getElementById('even').checked;
-	var none 		= document.getElementById('none-of-both').checked;
-	var uneven 		= document.getElementById('uneven').checked;
-	var dice		= document.getElementById('dice');
+	var even 	= document.getElementById('even').checked;
+	var none 	= document.getElementById('none-of-both').checked;
+	var uneven 	= document.getElementById('uneven').checked;
+	var dice	= document.getElementById('dice');
 	var result  	= document.getElementById('result');
 	
 	var throwEven 	= randomNumber("EVEN");
 	var throwUneven = randomNumber("UNEVEN");
-	
-	
+		
 	/*
 		ATTENTION:
 		Here is an interesting use of the logical OR operator
 	*/
-	var winner	= throwEven || throwUneven;
+	var winner 	= throwEven || throwUneven;
 	
 	
 	if( (even !== false) || (none !== false) || (uneven !== false) )
@@ -114,7 +113,7 @@ function Bet()
 		
 		
 		// Show information on browser
-		dice.src 			= Interface.diceImage;
+		dice.src 		= Interface.diceImage;
 		result.innerHTML 	= Interface.result;
 		
 	}
